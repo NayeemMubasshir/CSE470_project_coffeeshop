@@ -1,0 +1,16 @@
+{% load static %}
+<div id="about" class="tm-page-content">
+    {% for object in about %}
+    <div class="tm-black-bg tm-mb-20 tm-about-box-1">
+        <h2 class="tm-text-primary tm-about-header">{{ object.title }}</h2>
+        <div class="tm-list-item tm-list-item-2">
+            <img src="{{ object.image.url }}" alt="Image" class="tm-list-item-img tm-list-item-img-big">
+            <div class="tm-list-item-text-2">
+                <p>{{ object.body }}</p>
+
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+
+</div>

@@ -1,0 +1,16 @@
+{% load static %}
+ <div id="special" class="tm-page-content">
+            <div class="tm-special-items">
+            {% for drink in special_drinks %}
+              <div class="tm-black-bg tm-special-item">
+                <img src="{{ drink.image.url }}" alt="Image" height="160px" width="320px">
+                <div class="tm-special-item-description">
+                  <h2 class="tm-text-primary tm-special-item-title">{{ drink.name }}</h2>
+                  <p class="tm-special-item-text">{{ drink.detail }}</p><br>
+                  <span class="tm-list-item-price">${{ drink.price }}</span>
+                </div>
+              </div>
+              {% endfor %}
+
+            </div>
+          </div>

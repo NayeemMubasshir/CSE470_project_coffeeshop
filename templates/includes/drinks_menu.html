@@ -1,0 +1,64 @@
+{% load static %}
+<nav class="tm-black-bg tm-drinks-nav">
+              <ul>
+                <li>
+                  <a href="#" class="tm-tab-link active" data-id="cold">Iced Coffee</a>
+                </li>
+                <li>
+                  <a href="#" class="tm-tab-link" data-id="hot">Hot Coffee</a>
+                </li>
+                <li>
+                  <a href="#" class="tm-tab-link" data-id="juice">Fruit Juice</a>
+                </li>
+              </ul>
+            </nav>
+
+            <div id="cold" class="tm-tab-content">
+              <div class="tm-list">
+              {% for drink in cold_drinks %}
+                <div class="tm-list-item">
+                  <img src="{{ drink.image.url }}" alt="Image" class="tm-list-item-img" height="160px" width="160px">
+                  <div class="tm-black-bg tm-list-item-text">
+                    <h3 class="tm-list-item-name">{{ drink.name }}<span class="tm-list-item-price">${{ drink.price }}</span></h3>
+                    <p class="tm-list-item-description">{{ drink.detail }}</p>
+                  </div>
+                </div>
+                {% endfor %}
+
+
+
+              </div>
+            </div>
+
+            <div id="hot" class="tm-tab-content">
+              <div class="tm-list">
+              {% for drink in hot_drinks %}
+                <div class="tm-list-item">
+                  <img src="{{ drink.image.url }}" alt="Image" class="tm-list-item-img" height="160px" width="160px">
+                  <div class="tm-black-bg tm-list-item-text">
+                    <h3 class="tm-list-item-name">{{ drink.name }}<span class="tm-list-item-price">${{ drink.price }}</span></h3>
+                    <p class="tm-list-item-description">{{ drink.detail }}</p>
+                  </div>
+                </div>
+                {% endfor %}
+
+
+
+              </div>
+            </div>
+
+            <div id="juice" class="tm-tab-content">
+              <div class="tm-list">
+              {% for drink in fruit_drinks %}
+                <div class="tm-list-item">
+                  <img src="{{ drink.image.url }}" alt="Image" class="tm-list-item-img" height="160px" width="160px">
+                  <div class="tm-black-bg tm-list-item-text">
+                    <h3 class="tm-list-item-name">{{ drink.name }}<span class="tm-list-item-price">${{ drink.price }}</span></h3>
+                    <p class="tm-list-item-description">{{ drink.detail }}</p>
+                  </div>
+                </div>
+                {% endfor %}
+
+
+              </div>
+            </div>
